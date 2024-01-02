@@ -3,4 +3,10 @@
 <h1>Home</h1>
 <p><%= homeContent %></p>
 
+<% posts.forEach(post => { %>
+    <h1><%= post.title %></h1>
+    <p style="display: inline;"><%= post.body.substring(0, 100) + "..." %></p>
+    <a href= "posts/<%= post.url %>" >Read More</a>
+<% }); %>
+
 <%- include("partials/footer") %>
